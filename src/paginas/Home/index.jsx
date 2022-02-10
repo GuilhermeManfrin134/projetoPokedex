@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import axios from 'axios';
 
+import { MdOutlineCatchingPokemon } from 'react-icons/md';
+import './home.css';
+
 export default function Home(){
 
-    const [pokemon, setPokemon] = useState([]);
+    const [pokemons, setPokemons] = useState([]);
   
     useEffect(() => {
         
@@ -12,7 +16,7 @@ export default function Home(){
         .then((response) => {
         console.log(response.data.results);
 
-        setPokemon(response.data.results);
+        setPokemons(response.data.results);
         })
         .catch((err)=>{
         console.log(err);
@@ -22,12 +26,16 @@ export default function Home(){
 
 
     return(
-        <div className="pokemon-lis">
-            {pokemon.map((poke) => {
+        <div className="pokemon-list">
+            {pokemons.map((poke) => {
                 return(
-                    <ul>
-                        <li key={poke.name}>{poke.name}</li>
-                    </ul>
+                    <Link to={`/pokemons/${poke.name}`}>
+                        <ul>
+                            <MdOutlineCatchingPokemon size={25} color='#FFF'/>
+                            <li key={poke.name}>{poke.name}</li>
+                        </ul>
+                    </Link>
+                    
                 )
             })}
         </div>

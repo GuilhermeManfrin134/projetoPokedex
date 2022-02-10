@@ -1,0 +1,37 @@
+.pokemon-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pokemon-list a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.pokemon-list a ul{
+    width: 90%;
+    border: 5px solid #FFF;
+    border-radius: 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: var(--corSecundaria);
+}
+
+.pokemon-list a ul:hover{
+    width: 92%;
+    height: 55px;
+}
+
+.pokemon-list a ul li{
+    list-style: none;
+    color: #FFF;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+
+.pokemon-list a ul svg{
+    margin-right: 15px;
+}
