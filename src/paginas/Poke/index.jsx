@@ -27,7 +27,7 @@ export default function Poke(){
     }, [name]);
 
     return(
-        <div key={pokemon.name} className="pokemon-perfil">
+        <div className="pokemon-perfil">
             <div className="name-img">
                 <h1>{pokemon.name}</h1>
                 <img
@@ -35,11 +35,12 @@ export default function Poke(){
                     alt={pokemon.name}
                 />
             </div>
+            <hr />
             <div className="description">
-                <h2>Abilities</h2>
+                <h1>Types</h1>
                 <ul>
-                    {pokemon.abilities.map((item) => (
-                        <li>{item.ability.name}</li>
+                    {pokemon.types.map((item) => (
+                        <li>{item.type.name}</li>
                     ))}
                 </ul>   
             </div>

@@ -1,3 +1,78 @@
-.pokemon-perfil h1{
+.pokemon-perfil{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    border: 5px #FFF solid;
+    border-radius: 15px;
+    margin: 20px auto;
+    background-color: var(--corSecundaria);
+    padding: 20px;
+}
+
+.pokemon-perfil{
     text-transform: uppercase;
+    color: #FFF;
+}
+
+.name-img{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.name-img img{
+    height: 150px;
+    width: 150px;
+    margin: auto;
+}
+.name-img h1, .description h1{
+    margin: 20px auto;
+}
+
+.description{
+    width: 40%;
+    color: #FFF;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.description ul{
+    display: flex;
+    margin: 60px 0;
+    padding: 0;
+    cursor: default;
+}
+
+.description ul li{
+    list-style: none;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    cursor: default;
+}
+.pokemon-perfil hr{
+    border: 1;
+    border-style: solid;
+}
+
+
+@media screen and (max-width: 600px){
+    .pokemon-perfil{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .description ul{
+        flex-direction: column;
+    }
+
+    .name-img, .description{
+        width: 100%;
+    }
+
+    .pokemon-perfil hr{
+        width: 95%;
+    }
 }
